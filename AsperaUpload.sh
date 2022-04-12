@@ -1,10 +1,23 @@
 #!/bin/bash
 
-MyValue=$1
+MyValue='/Users/selenium/Downloads/AsperaIBMLogo.jpg'
 MyValue2=$2
 #osascript <<EOD
 /usr/bin/osascript<<EOF
     on run
+    tell application "Aspera Connect"
+	        activate
+	        tell application "System Events"
+	            tell process "Aspera Connect"
+			        repeat until exists of button 1 of window 1
+			        delay 1
+			        end repeat
+			        delay 2
+			        keystroke return
+			        click button "Yes"
+                end tell
+            end tell
+        end tell
         tell application "Aspera Connect"
 	        activate
 	        set myFile to do shell script "echo '$MyValue'"
@@ -24,19 +37,7 @@ MyValue2=$2
             end tell
         end tell
         delay 10
-        tell application "Aspera Connect"
-	        activate
-	        tell application "System Events"
-	            tell process "Aspera Connect"
-			        repeat until exists of button 1 of window 1
-			        delay 1
-			        end repeat
-			        delay 2
-			        keystroke return
-#			        click button "Allow"
-                end tell
-            end tell
-        end tell
+        
         tell application "Aspera Connect"
 	        activate
 	        set myFile to do shell script "echo '$MyValue2’”
