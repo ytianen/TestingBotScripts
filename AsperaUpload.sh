@@ -10,6 +10,15 @@ tell application "Aspera Connect"
 			click checkbox of window 1
 			delay 1
 			click button "Yes" of window 1
+			repeat until exist button "Cancel" of window 1
+				delay 1
+			end repeat
+			click pop up button "Where:" of window 1 of application process "Aspera Connect"
+			delay 5
+			click menu item "Users" of menu 1 of pop up button "Where:" of window 1 of application process "Aspera Connect"
+			delay 5
+			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1 of application process "IBM Aspera Connect"
+			delay 5
             end tell
         end tell
 end tell
