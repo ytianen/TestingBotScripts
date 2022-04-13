@@ -1,9 +1,4 @@
-#!/bin/bash
-
-MyValue='/Users/selenium/Downloads/AsperaIBMLogo.jpg'
-MyValue2=$2
-#osascript <<EOD
-/usr/bin/osascript<<EOF
+osascript <<EOD
     on run
     tell application "Aspera Connect"
 	        activate
@@ -64,5 +59,7 @@ delay 1.822998
 set timeoutSeconds to 2.000000
 set uiScript to "click UI Element \"Open\" of window 1 of application process \"IBM Aspera Connect\""
 my doWithTimeout( uiScript, timeoutSeconds )
+
+EOD
 
 
