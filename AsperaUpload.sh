@@ -4,7 +4,6 @@
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 
 osascript <<EOD
-
 tell application "Aspera Connect"
 	activate
 	tell application "System Events"
@@ -20,7 +19,6 @@ tell application "Aspera Connect"
 			repeat until exist button "Cancel" of window 1
 				delay 1
 			end repeat
-			click pop up button "Where:" of window 1
 			delay 3
 			click menu item "Users" of menu 1 of pop up button "Where:" of window 1
 			delay 5
@@ -34,7 +32,6 @@ tell application "Aspera Connect"
         	end tell
         end tell
 end tell
-
 EOD
 
 
