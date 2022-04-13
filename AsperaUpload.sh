@@ -19,7 +19,7 @@ tell application "Aspera Connect"
 			delay 5
 			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1 of application process "IBM Aspera Connect"
 			delay 5
-            end tell
+        	end tell
         end tell
 end tell
         
