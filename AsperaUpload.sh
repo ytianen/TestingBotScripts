@@ -20,14 +20,12 @@ MyValue2=$2
         end tell
         tell application "Aspera Connect"
 	        activate
-	        set myFile to do shell script "echo '$MyValue'"
 	        tell application "System Events"
 	            tell process "Aspera Connect"
 	                repeat until exists window 1
 	                delay 1
 	                end repeat
-			   
-			end tell
+		     end tell
             end tell
         end tell
         
