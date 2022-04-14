@@ -16,5 +16,19 @@ tell application "Aspera Connect"
 			click button "Yes" of window 1
 		end tell
 	end tell
+	tell application "System Events"
+		tell process "Aspera Connect"
+	                repeat until exists window 1
+	                delay 1
+	                end repeat
+			        keystroke "g" using {command down, shift down}
+			        delay 2
+			        keystroke '/Users/selenium/Desktop/Logo.jpg'
+			        delay 1
+			        keystroke return
+			        delay 2
+			        keystroke return
+		end tell
+	end tell
 end tell
 EOD
