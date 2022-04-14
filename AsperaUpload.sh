@@ -26,11 +26,11 @@ tell application "Aspera Connect"
 			delay 5
      			click group 4 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
 			delay 2
-     			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+     			click group 1 of list 1 of scroll area 3 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
 			delay 2
-     			click group 3 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+     			click group 3 of list 1 of scroll area 4 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
 			delay 2
-     			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+     			click group 1 of list 1 of scroll area 5 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
 			delay 2
 			click button "Open" of window 1
 		end tell
