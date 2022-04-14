@@ -3,8 +3,6 @@
 # sudo installer -package /Volumes/Aspera\ Connect\ Installer/AsperaConnectInstaller.pkg -target /
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 
-MyValue='/Users/selenium/Desktop/Logo.jpg'
-
 osascript <<EOD
 tell application "Aspera Connect"
 	activate
@@ -28,7 +26,7 @@ tell application "Aspera Connect"
 			delay 2
 			keystroke "G" using {command down, shift down}
 			delay 2
-			keystroke myFile
+			keystroke '/Users/selenium/Desktop/Logo.jpg'
 			delay 2
 			keystroke return
 			delay 2
