@@ -16,5 +16,24 @@ tell application "Aspera Connect"
 			click button "Yes" of window 1
 		end tell
 	end tell
+	tell application "System Events"
+		tell process "Aspera Connect"
+			repeat until exists button "Cancel" of window 1
+				delay 1
+			end repeat
+			delay 2
+			click menu item "Untitled" of menu 1 of pop up button "Where:" of window 1
+			delay 5
+     			click group 4 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+			delay 2
+     			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+			delay 2
+     			click group 3 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+			delay 2
+     			click group 1 of list 1 of scroll area 2 of scroll area 1 of browser 1 of splitter group 1 of splitter group 1 of window 1
+			delay 2
+			click button "Open" of window 1
+		end tell
+	end tell
 end tell
 EOD
