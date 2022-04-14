@@ -17,7 +17,7 @@ tell application "Aspera Connect"
 		end tell
 	end tell
 	tell application "System Events"
-		tell process "IBM Aspera Connect"
+		tell process "Aspera Connect"
 			repeat until exists button "Cancel" of window 1
 				delay 1
 			end repeat
