@@ -17,17 +17,17 @@ tell application "Aspera Connect"
 		end tell
 	end tell
 	tell application "System Events"
-		tell process "Aspera Connect"
-	                repeat until exists button "Cancel" of window 1
-	                delay 1
-	                end repeat
-			        keystroke "G" using {command down, shift down}
-			        delay 2
-			        keystroke '/Users/selenium/Desktop/Logo.jpg'
-			        delay 1
-			        keystroke return
-			        delay 2
-			        keystroke return
+		tell process "IBM Aspera Connect"
+			repeat until exists button "Cancel" of window 1
+				delay 1
+			end repeat
+			keystroke "G" using {command down, shift down}
+			delay 2
+			keystroke "/Users/selenium/Desktop/Logo.jpg"
+			delay 1
+			keystroke return
+			delay 2
+			keystroke return
 		end tell
 	end tell
 end tell
