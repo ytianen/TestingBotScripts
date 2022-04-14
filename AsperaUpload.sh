@@ -18,10 +18,10 @@ tell application "Aspera Connect"
 	end tell
 	tell application "System Events"
 		tell process "Aspera Connect"
-	                repeat until exists window 1
+	                repeat until exists button "Cancel" of window 1
 	                delay 1
 	                end repeat
-			        keystroke "g" using {command down, shift down}
+			        keystroke "G" using {command down, shift down}
 			        delay 2
 			        keystroke '/Users/selenium/Desktop/Logo.jpg'
 			        delay 1
