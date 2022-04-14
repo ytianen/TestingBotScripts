@@ -6,7 +6,6 @@
 osascript <<EOD
 tell application "Aspera Connect"
 	activate
-	set myFile to do shell script "echo '$MyValue'"
 	tell application "System Events"
 		tell process "Aspera Connect"
 			repeat until exists button "Yes" of window 1
