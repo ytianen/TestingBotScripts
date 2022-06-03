@@ -1,3 +1,4 @@
+osascript <<EOD
 tell application "System Events"
 	tell application process "Chrome"
 		repeat until exists UI Element "Cancel" of sheet 1 of window 1
