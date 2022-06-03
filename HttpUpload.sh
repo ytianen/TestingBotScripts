@@ -5,7 +5,7 @@ tell application "System Events"
 		end repeat
 		keystroke "G" using {command down, shift down}
 		delay 2
-		keystroke "/Users/yut052/Desktop/HotFolderWland31.jpg"
+		keystroke "/Users/selenium/Desktop/Logo.jpg"
 		delay 1
 		keystroke return
 		delay 2
