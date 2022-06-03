@@ -1,6 +1,6 @@
 tell application "System Events"
 	tell application process "Chrome"
-		repeat until exists button "Open" of window 1
+		repeat until UI Element "Open" of sheet 1 of window "Wonderland | Walt Disney Studios - Google Chrome - Default"
 			delay 1
 		end repeat
 		keystroke "G" using {command down, shift down}
