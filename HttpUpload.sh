@@ -5,6 +5,7 @@
 osascript <<EOD
 tell application "System Events"
 	display dialog "script is running"
+	delay 5
 	tell application process "Chrome"
 		repeat until exists UI Element "Open" of sheet 1 of window 1
 			delay 1
