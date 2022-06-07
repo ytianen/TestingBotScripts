@@ -7,7 +7,7 @@ tell application "System Events"
 	delay 5
 	tell application process "Chrome"
 		display dialog "waiting for chrome"
-		repeat until exists Button "Open" of sheet 1 of window 1
+		repeat until exists button "Open" of sheet 1 of window 2
 			delay 1
 		end repeat
 		display dialog "found window for chrome"
