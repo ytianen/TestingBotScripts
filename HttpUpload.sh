@@ -4,12 +4,13 @@
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 osascript <<EOD
 tell application "System Events"
-	display dialog "script is running"
 	delay 5
 	tell application process "Chrome"
+		display dialog "waiting for chrome"
 		repeat until exists UI Element "Open" of sheet 1 of window 1
 			delay 1
 		end repeat
+		display dialog "found window for chrome"
 		keystroke "G" using {command down, shift down}
 		delay 2
 		keystroke "/Users/selenium/Desktop/Logo.jpg"
