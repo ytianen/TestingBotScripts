@@ -9,9 +9,9 @@ tell application "System Events"
 		repeat until exists UI element 1 of row 3 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
 			delay 1
 		end repeat
-		# display dialog "found window for chrome"
+		display dialog "found window for chrome"
 	end tell
-	keystroke "Tab" using {command down}
+	delay1
 	keystroke "Tab" using {command down}
 	delay 2
 	keystroke "G" using {command down, shift down}
