@@ -8,8 +8,8 @@ tell application "System Events"
 		repeat until exists UI Element 1 of row 1 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
 			delay 1
 		end repeat
-		delay 2
-		click UI Element "Desktop" of window 1
+	end tell
+	tell application process "Chrome"
 		delay 2
 		keystroke "G" using {command down, shift down}
 		delay 2
