@@ -5,13 +5,11 @@
 osascript <<EOD
 tell application "System Events"
 	tell application process "Chrome"
-		# display dialog "waiting for chrome"
-		repeat until exists UI Element 1 of row 4 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
+		repeat until exists UI Element 1 of row 1 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
 			delay 1
 		end repeat
-		# display dialog "found window for chrome"
 		delay 2
-		click UI Element 1 of row 4 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
+		click UI Element "Desktop" of window 1
 		delay 2
 		keystroke "G" using {command down, shift down}
 		delay 2
