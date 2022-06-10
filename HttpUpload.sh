@@ -11,6 +11,8 @@ tell application "System Events"
 			delay 1
 		end repeat
 		display dialog "found window for chrome"
+		click UI Element 1 of row 5 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
+		delay 1
 		keystroke "G" using {command down, shift down}
 		delay 2
 		keystroke "/Users/selenium/Desktop/Logo.jpg"
