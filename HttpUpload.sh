@@ -4,9 +4,6 @@
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 osascript <<EOD
 tell application "System Events"
-	tell application "Safari"
-		activate
-	end tell
 	tell application process "Chrome"
 	
 		# display dialog "waiting for chrome"
@@ -15,19 +12,17 @@ tell application "System Events"
 		end repeat
 		# display dialog "found window for chrome"
 	end tell
-	delay 1
-	keystroke "Tab" using {command down}
-	delay 1
-	keystroke "Tab" using {command down}
-	delay 2
-	keystroke "G" using {command down, shift down}
-	delay 2
-	keystroke "/Users/selenium/Desktop/Logo.jpg"
-	delay 1
-	keystroke return
-	delay 2
-	keystroke return
-	
+	tell application process "Chrome"
+		set frontmost to true
+		delay 2
+		keystroke "G" using {command down, shift down}
+		delay 2
+		keystroke "/Users/selenium/Desktop/Logo.jpg"
+		delay 1
+		keystroke return
+		delay 2
+		keystroke return
+	end tell
 end tell
 
 
