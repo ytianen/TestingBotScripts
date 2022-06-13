@@ -11,8 +11,8 @@ tell application "System Events"
 		end repeat
 		# display dialog "found window for chrome"
 	end tell
-	tell application "Dock"
-		click UI Element "Google Chrome" of list 1 of process 1
+	tell application process "Dock"
+		click UI Element "Google Chrome" of list 1
 	end tell
 	tell application process "Chrome"
 		set frontmost to true
