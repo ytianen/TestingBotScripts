@@ -3,7 +3,11 @@
 # sudo installer -package /Volumes/Aspera\ Connect\ Installer/AsperaConnectInstaller.pkg -target /
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 osascript <<EOD
+
+MyValue1=$1
+
 tell application "System Events"
+	set myFile to do shell script "echo '$MyValue1'"
 	tell application process "Chrome"
 		# display dialog "waiting for chrome"
 		repeat until exists UI element 1 of row 3 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
@@ -18,7 +22,7 @@ tell application "System Events"
 		delay 2
 		keystroke "G" using {command down, shift down}
 		delay 2
-		keystroke "/Users/selenium/Desktop/Logo.jpg"
+		keystroke myFile
 		delay 1
 		keystroke return
 		delay 2
