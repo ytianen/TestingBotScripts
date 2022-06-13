@@ -4,6 +4,9 @@
 # sudo hdiutil detach /Volumes/Aspera\ Connect\ Installer/
 osascript <<EOD
 tell application "System Events"
+	tell application "Safari"
+		activate
+	end tell
 	tell application process "Chrome"
 		# display dialog "waiting for chrome"
 		repeat until exists UI element 1 of row 3 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
