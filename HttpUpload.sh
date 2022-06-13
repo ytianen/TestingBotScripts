@@ -5,12 +5,11 @@
 osascript <<EOD
 tell application "System Events"
 	tell application process "Chrome"
-	
 		# display dialog "waiting for chrome"
 		repeat until exists UI element 1 of row 3 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
 			delay 1
 		end repeat
-		# display dialog "found window for chrome"
+		display dialog "found window for chrome"
 	end tell
 	tell application process "Chrome"
 		set frontmost to true
