@@ -15,8 +15,6 @@ tell application "System Events"
 		click UI Element "Google Chrome" of list 1
 	end tell
 	tell application process "Chrome"
-		set frontmost to true
-		click UI element 1 of row 3 of outline 1 of scroll area 1 of splitter group 1 of sheet 1 of window 1
 		delay 2
 		keystroke "G" using {command down, shift down}
 		delay 2
@@ -26,6 +24,7 @@ tell application "System Events"
 		delay 2
 		keystroke return
 	end tell
+	display dialog "end of script"
 end tell
 
 
